@@ -439,7 +439,10 @@ function twentytwelve_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'twentytwelve_customize_register' );
 
-
+/*
+	shortcode for youtube iframe lazy-loading
+	example usage [youtube-lazy guid="youtube-id"]
+*/
 function register_shortcodes(){
    add_shortcode('youtube-lazy', 'youtube_lazy_function');
 }
@@ -462,6 +465,15 @@ function youtube_lazy_function($atts){
 
    return $return_string;
 }
+
+/*
+	stratus work
+*/
+function stratus_setup() {
+    wp_enqueue_script( 'stratus' ,'http://stratus.sc/stratus.js', array('jquery'), '1', true);
+    wp_enqueue_script( 'stratus-config' ,get_template_directory_uri() . '/js/his-stratus-config.js', array('jquery', 'stratus'), '1', true);
+}
+add_action('wp_footer', 'stratus_setup');
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
