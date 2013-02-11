@@ -451,7 +451,7 @@ add_action( 'init', 'register_shortcodes');
 
 function youtube_lazy_function($atts){
 	wp_enqueue_script( 'his-youtube-lazy',  get_template_directory_uri() . '/js/his-youtube-lazy.js', array('jquery'), '1', true);
-	wp_enqueue_style( 'his-youtube-lazy', get_template_directory_uri() . '/css/his-youtube-lazy.css', array(), '1', 'all' );
+	wp_enqueue_style( 'his-youtube-lazy', get_template_directory_uri() . '/css/his-youtube-lazy.css', array(), '2', 'all' );
 
 	$shortcode_attributes = shortcode_atts(array('width' => 624, 'height' => 351, 'guid' => ''), $atts);
 
