@@ -7,6 +7,6 @@ jQuery(document).ready(function($) {
             video_container = $(this).parent().parent();                
         }
         
-        video_container.html('<iframe width="640" height="360" src="http://www.youtube.com/embed/' + $(this).attr('data-guid') + '?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+        video_container.html('<iframe width="736" height="414" src="http://www.youtube.com/embed/' + $(this).attr('data-guid') + '?autoplay=1" frameborder="0" allowfullscreen></iframe>');
     });
 });

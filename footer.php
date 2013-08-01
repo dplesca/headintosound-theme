@@ -2,36 +2,32 @@
 /**
  * The template for displaying the footer.
  *
- * Contains footer content and the closing of the
- * #main and #page div elements.
+ * Contains the closing of the id=main div and all content after
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package headintobootstrap
  */
 ?>
-	</div><!-- #main .wrapper -->
-	<footer id="colophon" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'twentytwelve_credits' ); ?>
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentytwelve' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+
+	</div><!-- #main -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-5915627-7']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+<script>
+jQuery(document).ready(function($) {
+	$('#respond').addClass('col-lg-9');
+	$('#commentform').addClass('form-horizontal');
+	$('#submit').addClass('btn').addClass('btn-primary');
+	var stratus_links = [];
+	$('a.stratus').each(function( key, value ){
+		stratus_links.push(value);
+	});			
+	$.stratus({
+		links: stratus_links.join(','),
+		color: '333'
+	});
+});
+(function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','UA-5915627-7');ga('send','pageview')
 </script>
 </body>
 </html>
