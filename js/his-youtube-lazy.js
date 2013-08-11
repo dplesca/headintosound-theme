@@ -1,12 +1,5 @@
 jQuery(document).ready(function($) {
-    $('.his-youtube-video img, .his-youtube-play svg').click(function(){
-        var video_container;
-        if( $(this).parent().attr('class') == 'his-youtube-video' ){
-            video_container = $(this).parent();             
-        } else{             
-            video_container = $(this).parent().parent();                
-        }
-        
-        video_container.html('<iframe width="736" height="414" src="http://www.youtube.com/embed/' + $(this).attr('data-guid') + '?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+    $('.his-youtube-video img, .play-image').click(function(){
+        $(this).parent().html('<iframe width="' + $(this).width() + '" height="' + (($(this).parent().width() / 16) * 9) + '" src="http://www.youtube.com/embed/' + $(this).attr('data-guid') + '?autoplay=1" frameborder="0" allowfullscreen></iframe>');
     });
 });
