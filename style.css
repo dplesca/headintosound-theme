@@ -320,6 +320,7 @@ body {
   background-repeat: none;
   background-position: top center;
   background-attachment: fixed;
+  padding-bottom: 32px;
 }
 
 input,
@@ -4770,4 +4771,8 @@ article.post{
 }
 .entry-content{
   padding-top: 10px;
+  position: relative;
+}
+.tags-links, .comments-link{
+  margin-left: 20px;
 }
