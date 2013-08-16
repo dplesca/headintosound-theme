@@ -86,7 +86,7 @@ function youtube_lazy_function($atts){
 
    $return_string = '
 		<div class="his-youtube-video">
-            <img data-guid="'. $shortcode_attributes['guid'] .'" class="his-youtube-thumb" src="http://img.youtube.com/vi/'. $shortcode_attributes['guid'] .'/hqdefault.jpg" alt="" />
+            <img data-guid="'. $shortcode_attributes['guid'] .'" class="his-youtube-thumb" src="/assets/grey.gif" data-original="http://img.youtube.com/vi/'. $shortcode_attributes['guid'] .'/hqdefault.jpg" alt="" />
             <div class="play-image" data-guid="'. $shortcode_attributes['guid'] .'"></div>
         </div>';
 
